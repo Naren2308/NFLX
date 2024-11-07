@@ -1,0 +1,6 @@
+project/
+├── app.py
+├── templates/
+│   └── index.html
+└── static/
+    └── plot.png  # Placeholder for generated plot images
