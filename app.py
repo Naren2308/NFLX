@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 # Load and preprocess data
 def load_and_process_data(filename):
-    data = pd.read_csv(filename)
+    data = pd.read_csv('NFLX.csv')
     data['Date'] = pd.to_datetime(data['Date'])
     data.set_index('Date', inplace=True)
     data = data[['Close']]
@@ -50,7 +50,7 @@ def index():
         file.save(file_path)
 
         # Load and preprocess data
-        data = load_and_process_data(file_path)
+        data = load_and_process_data('NFLX.csv')
         train_data, test_data, scaler = prepare_data(data)
 
         lookback = 90
