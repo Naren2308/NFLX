@@ -87,7 +87,7 @@ def index():
         plt.xlabel('Date')
         plt.ylabel('Stock Price')
         plt.legend()
-        plt.savefig('static/plot.png')
+        plt.savefig('NFLX_Stock_Prediction.png')
         
         return redirect(url_for('result'))
 
@@ -95,7 +95,7 @@ def index():
 
 @app.route('/result')
 def result():
-    return render_template('result.html', plot_url='static/plot.png')
+    return render_template('result.html', plot_url='NFLX_Stock_Prediction.png')
 
 if __name__ == '__main__':
     app.run(debug=True)
